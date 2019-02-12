@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Crawler</title>
+
+</head>
+<body class="body">
+<div>
+  <div class="header">
+    <h3 class="text-muted" style="text-align: center">Image Crawler</h3>
+  </div>
+
+  <div>
+    <form name="myForm" class="form" >
+      <h1>Enter URL</h1>
+      <input type="name" name="inputURL" class="input-text" id="inputURL" placeholder="URL" ng-model="inputUrl"
+             required autofocus>
+      <br>
+      <button class="btn" id="btnSubmit" type="submit" ng-click="checkURL()">Crawl Photos!</button>
+    </form>
+  </div>
+
+
+</div>
+<div class="col-xs-1"></div>
+<div class="col-xs-10" style="text-align: center">
+  <i ng-repeat="img in images" data-fancybox="gallery" class="imgGalary"  data-caption="{{ img.url }}" href="{{ img.url }}">
+        <img class="gallery-thumbnail card-img-top" src="{{ img.url }}"  alt="Image description" style="margin: 10px;" />
+  </i>
+</div>
+
+<div class="col-xs-1"></div>
+
+<div class="col-xs-12" style="text-align: center;">
+  <p>&#169 Avishek Prasad</p>
+</div>
+<input type="text" id="dummyTextBox" style="position: fixed;top: -10px;">
+</body>
+</html>
